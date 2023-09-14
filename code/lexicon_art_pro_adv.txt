@@ -1,0 +1,741 @@
+a
+another
+any
+anybody
+anyone
+anything
+both
+certain
+each
+either
+everybody
+everyone
+everything
+few
+fewer
+many
+neither
+nobody
+none
+nothing
+one
+oneself
+other
+same
+self
+several
+some
+some
+somebody
+someone
+something
+such
+suchlike
+that
+the
+this
+what
+whatever
+whatsoever
+when
+wherewith
+wherewithal
+which
+whichsoever
+whoso
+ye
+ye
+you-all
+these
+those
+an
+they
+them
+their
+who
+whom
+whoever
+whomever
+whose
+i
+you
+he
+she
+him
+her
+his
+hers
+your
+my
+it
+its
+we
+our
+us
+ours
+much
+many
+more
+myself
+yourself
+himself
+herself
+themselves
+aback aback adverb adverbs pos 
+ably ably adverb adverbs pos 
+aboard aboard adverb adverbs pos 
+above above adverb adverbs pos 
+abreast abreast adverb adverbs pos 
+accordingly accordingly adverb adverbs pos 
+across across adverb adverbs pos 
+actually actually adverb adverbs pos 
+adagio adagio adverb adverbs pos 
+adrift adrift adverb adverbs pos 
+afield afield adverb adverbs pos 
+afresh afresh adverb adverbs pos 
+aft aft adverb adverbs pos 
+afternoons afternoons adverb adverbs pos 
+afterward afterward adverb adverbs pos 
+ago ago adverb adverbs pos 
+aground aground adverb adverbs pos 
+alike alike adverb adverbs pos 
+all all adverb adverbs pos 
+allegro allegro adverb adverbs pos 
+almost almost adverb adverbs pos 
+aloft aloft adverb adverbs pos 
+alone alone adverb adverbs pos 
+along along adverb adverbs pos 
+alongside alongside adverb adverbs pos 
+already already adverb adverbs pos 
+alright alright adverb adverbs pos 
+also also adverb adverbs pos 
+alway alway adverb adverbs pos 
+always always adverb adverbs pos 
+amidships amidships adverb adverbs pos 
+amiss amiss adverb adverbs pos 
+anew anew adverb adverbs pos 
+angrily angrily adverb adverbs pos 
+any any adverb adverbs pos 
+anyhow anyhow adverb adverbs pos 
+anymore anymore adverb adverbs pos 
+anyplace anyplace adverb adverbs pos 
+anything anything adverb adverbs pos 
+anyway anyway adverb adverbs pos 
+anyways anyways adverb adverbs pos 
+anywhere anywhere adverb adverbs pos 
+apace apace adverb adverbs pos 
+apart apart adverb adverbs pos 
+apiece apiece adverb adverbs pos 
+arbitrarily arbitrarily adverb adverbs pos 
+around around adverb adverbs pos 
+ashore ashore adverb adverbs pos 
+aside aside adverb adverbs pos 
+askew askew adverb adverbs pos 
+astray astray adverb adverbs pos 
+astride astride adverb adverbs pos 
+athwart athwart adverb adverbs pos 
+awash awash adverb adverbs pos 
+away away adverb adverbs pos 
+awfully awfully adverb adverbs pos 
+awhile awhile adverb adverbs pos 
+awry awry adverb adverbs pos 
+aye aye adverb adverbs pos 
+back back adverb adverbs pos 
+backhand backhand adverb adverbs pos 
+backstage backstage adverb adverbs pos 
+backward backward adverb adverbs pos 
+bang bang adverb adverbs pos 
+bareback bareback adverb adverbs pos 
+before before adverb adverbs pos 
+beforehand beforehand adverb adverbs pos 
+behind behind adverb adverbs pos 
+below below adverb adverbs pos 
+beneath beneath adverb adverbs pos 
+beside beside adverb adverbs pos 
+beyond beyond adverb adverbs pos 
+bimonthly bimonthly adverb adverbs pos 
+blind blind adverb adverbs pos 
+bloody bloody adverb adverbs pos 
+bodily bodily adverb adverbs pos 
+bolt bolt adverb adverbs pos 
+broadside broadside adverb adverbs pos 
+buck buck adverb adverbs pos 
+busily busily adverb adverbs pos 
+by by adverb adverbs pos 
+cheerily cheerily adverb adverbs pos 
+cleanly cleanly adverb adverbs pos 
+clockwise clockwise adverb adverbs pos 
+clumsily clumsily adverb adverbs pos 
+collect collect adverb adverbs pos 
+constitutionally constitutionally adverb adverbs pos 
+contact contact adverb adverbs pos 
+contrary contrary adverb adverbs pos 
+counterclockwise counterclockwise adverb adverbs pos 
+cowardly cowardly adverb adverbs pos 
+cracking cracking adverb adverbs pos 
+crazily crazily adverb adverbs pos 
+crisscross crisscross adverb adverbs pos 
+cross cross adverb adverbs pos 
+crosswise crosswise adverb adverbs pos 
+crustily crustily adverb adverbs pos 
+customarily customarily adverb adverbs pos 
+daily daily adverb adverbs pos 
+daintily daintily adverb adverbs pos 
+damn damn adverb adverbs pos 
+darn darn adverb adverbs pos 
+days days adverb adverbs pos 
+differently differently adverb adverbs pos 
+directly directly adverb adverbs pos 
+dizzily dizzily adverb adverbs pos 
+doggone doggone adverb adverbs pos 
+double double adverb adverbs pos 
+doubly doubly adverb adverbs pos 
+doubtless doubtless adverb adverbs pos 
+down down adverb adverbs pos 
+downhill downhill adverb adverbs pos 
+downrange downrange adverb adverbs pos 
+downright downright adverb adverbs pos 
+downstairs downstairs adverb adverbs pos 
+downtown downtown adverb adverbs pos 
+downward downward adverb adverbs pos 
+downwind downwind adverb adverbs pos 
+dreamily dreamily adverb adverbs pos 
+dripping dripping adverb adverbs pos 
+dryly dryly adverb adverbs pos 
+due due adverb adverbs pos 
+duly duly adverb adverbs pos 
+each each adverb adverbs pos 
+early early adverb adverbs pos 
+earthward earthward adverb adverbs pos 
+easily easily adverb adverbs pos 
+east east adverb adverbs pos 
+easterly easterly adverb adverbs pos 
+eastward eastward adverb adverbs pos 
+eke eke adverb adverbs pos 
+else else adverb adverbs pos 
+elsewhere elsewhere adverb adverbs pos 
+embarrassingly embarrassingly adverb adverbs pos 
+empty empty adverb adverbs pos 
+enough enough adverb adverbs pos 
+equally equally adverb adverbs pos 
+erstwhile erstwhile adverb adverbs pos 
+evenings evenings adverb adverbs pos 
+evermore evermore adverb adverbs pos 
+everywhere everywhere adverb adverbs pos 
+exactly exactly adverb adverbs pos 
+exceedingly exceedingly adverb adverbs pos 
+express express adverb adverbs pos 
+expressly expressly adverb adverbs pos 
+extra extra adverb adverbs pos 
+extraordinarily extraordinarily adverb adverbs pos 
+fairly fairly adverb adverbs pos 
+false false adverb adverbs pos 
+falsetto falsetto adverb adverbs pos 
+familiarly familiarly adverb adverbs pos 
+fatally fatally adverb adverbs pos 
+fine fine adverb adverbs pos 
+finely finely adverb adverbs pos 
+first first adverb adverbs pos 
+first-rate first-rate adverb adverbs pos 
+flat flat adverb adverbs pos 
+flush flush adverb adverbs pos 
+fondly fondly adverb adverbs pos 
+fore fore adverb adverbs pos 
+foremost foremost adverb adverbs pos 
+formerly formerly adverb adverbs pos 
+forte forte adverb adverbs pos 
+forth forth adverb adverbs pos 
+forthright forthright adverb adverbs pos 
+fortissimo fortissimo adverb adverbs pos 
+fortnightly fortnightly adverb adverbs pos 
+forward forward adverb adverbs pos 
+forwards forwards adverb adverbs pos 
+frankly frankly adverb adverbs pos 
+free free adverb adverbs pos 
+frequently frequently adverb adverbs pos 
+friendly friendly adverb adverbs pos 
+fro fro adverb adverbs pos 
+full full adverb adverbs pos 
+fully fully adverb adverbs pos 
+furthermore furthermore adverb adverbs pos 
+gaily gaily adverb adverbs pos 
+gamely gamely adverb adverbs pos 
+generally generally adverb adverbs pos 
+gloomily gloomily adverb adverbs pos 
+grave grave adverb adverbs pos 
+greedily greedily adverb adverbs pos 
+guiltily guiltily adverb adverbs pos 
+half half adverb adverbs pos 
+happily happily adverb adverbs pos 
+hard hard adverb adverbs pos 
+hardly hardly adverb adverbs pos 
+hastily hastily adverb adverbs pos 
+haughtily haughtily adverb adverbs pos 
+headfirst headfirst adverb adverbs pos 
+headlong headlong adverb adverbs pos 
+healthily healthily adverb adverbs pos 
+heartily heartily adverb adverbs pos 
+heavenward heavenward adverb adverbs pos 
+heavily heavily adverb adverbs pos 
+heavy heavy adverb adverbs pos 
+hence hence adverb adverbs pos 
+henceforth henceforth adverb adverbs pos 
+here here adverb adverbs pos 
+hereby hereby adverb adverbs pos 
+heretofore heretofore adverb adverbs pos 
+herewith herewith adverb adverbs pos 
+high high adverb adverbs pos 
+hitherto hitherto adverb adverbs pos 
+holidays holidays adverb adverbs pos 
+home home adverb adverbs pos 
+horseback horseback adverb adverbs pos 
+hot hot adverb adverbs pos 
+hourly hourly adverb adverbs pos 
+how how adverb adverbs pos 
+humanly humanly adverb adverbs pos 
+hungrily hungrily adverb adverbs pos 
+icily icily adverb adverbs pos 
+ideally ideally adverb adverbs pos 
+ill ill adverb adverbs pos 
+immediately immediately adverb adverbs pos 
+incommunicado incommunicado adverb adverbs pos 
+increasingly increasingly adverb adverbs pos 
+indoors indoors adverb adverbs pos 
+inland inland adverb adverbs pos 
+inshore inshore adverb adverbs pos 
+inside inside adverb adverbs pos 
+instantly instantly adverb adverbs pos 
+involuntarily involuntarily adverb adverbs pos 
+inward inward adverb adverbs pos 
+inwardly inwardly adverb adverbs pos 
+jauntily jauntily adverb adverbs pos 
+jointly jointly adverb adverbs pos 
+jolly jolly adverb adverbs pos 
+jump jump adverb adverbs pos 
+just just adverb adverbs pos 
+kindly kindly adverb adverbs pos 
+large large adverb adverbs pos 
+largo largo adverb adverbs pos 
+last last adverb adverbs pos 
+late late adverb adverbs pos 
+lazily lazily adverb adverbs pos 
+lengthwise lengthwise adverb adverbs pos 
+lightly lightly adverb adverbs pos 
+like like adverb adverbs pos 
+likely likely adverb adverbs pos 
+likewise likewise adverb adverbs pos 
+little little adverb adverbs pos 
+loftily loftily adverb adverbs pos 
+long long adverb adverbs pos 
+long-distance long-distance adverb adverbs pos 
+loose loose adverb adverbs pos 
+lots lots adverb adverbs pos 
+lowly lowly adverb adverbs pos 
+luckily luckily adverb adverbs pos 
+lustily lustily adverb adverbs pos 
+madly madly adverb adverbs pos 
+maestoso maestoso adverb adverbs pos 
+mainly mainly adverb adverbs pos 
+manana manana adverb adverbs pos 
+manly manly adverb adverbs pos 
+maybe maybe adverb adverbs pos 
+meantime meantime adverb adverbs pos 
+meanwhile meanwhile adverb adverbs pos 
+merrily merrily adverb adverbs pos 
+midway midway adverb adverbs pos 
+mightily mightily adverb adverbs pos 
+mock mock adverb adverbs pos 
+molto molto adverb adverbs pos 
+momentarily momentarily adverb adverbs pos 
+monthly monthly adverb adverbs pos 
+moodily moodily adverb adverbs pos 
+more more adverb adverbs pos 
+mornings mornings adverb adverbs pos 
+most most adverb adverbs pos 
+mostly mostly adverb adverbs pos 
+much much adverb adverbs pos 
+multiply multiply adverb adverbs pos 
+namely namely adverb adverbs pos 
+nastily nastily adverb adverbs pos 
+nay nay adverb adverbs pos 
+nearby nearby adverb adverbs pos 
+necessarily necessarily adverb adverbs pos 
+needs needs adverb adverbs pos 
+nevermore nevermore adverb adverbs pos 
+nevertheless nevertheless adverb adverbs pos 
+new new adverb adverbs pos 
+newly newly adverb adverbs pos 
+next next adverb adverbs pos 
+nigh nigh adverb adverbs pos 
+nightly nightly adverb adverbs pos 
+nix nix adverb adverbs pos 
+no no adverb adverbs pos 
+noisily noisily adverb adverbs pos 
+none none adverb adverbs pos 
+nonetheless nonetheless adverb adverbs pos 
+nope nope adverb adverbs pos 
+north north adverb adverbs pos 
+northeast northeast adverb adverbs pos 
+northeastward northeastward adverb adverbs pos 
+northerly northerly adverb adverbs pos 
+northward northward adverb adverbs pos 
+northwest northwest adverb adverbs pos 
+nothing nothing adverb adverbs pos 
+notwithstanding notwithstanding adverb adverbs pos 
+now now adverb adverbs pos 
+nowadays nowadays adverb adverbs pos 
+nowhere nowhere adverb adverbs pos 
+oblique oblique adverb adverbs pos 
+off off adverb adverbs pos 
+offhand offhand adverb adverbs pos 
+offshore offshore adverb adverbs pos 
+offstage offstage adverb adverbs pos 
+once once adverb adverbs pos 
+onetime onetime adverb adverbs pos 
+only only adverb adverbs pos 
+onward onward adverb adverbs pos 
+opposite opposite adverb adverbs pos 
+ordinarily ordinarily adverb adverbs pos 
+otherwise otherwise adverb adverbs pos 
+outboard outboard adverb adverbs pos 
+outdoors outdoors adverb adverbs pos 
+outright outright adverb adverbs pos 
+outside outside adverb adverbs pos 
+outward outward adverb adverbs pos 
+outwardly outwardly adverb adverbs pos 
+overall overall adverb adverbs pos 
+overboard overboard adverb adverbs pos 
+overland overland adverb adverbs pos 
+overly overly adverb adverbs pos 
+overnight overnight adverb adverbs pos 
+part part adverb adverbs pos 
+particularly particularly adverb adverbs pos 
+partly partly adverb adverbs pos 
+passing passing adverb adverbs pos 
+pell-mell pell-mell adverb adverbs pos 
+percent percent adverb adverbs pos 
+perchance perchance adverb adverbs pos 
+perfectly perfectly adverb adverbs pos 
+perforce perforce adverb adverbs pos 
+perfunctorily perfunctorily adverb adverbs pos 
+perhaps perhaps adverb adverbs pos 
+personally personally adverb adverbs pos 
+piano piano adverb adverbs pos 
+plenty plenty adverb adverbs pos 
+plumb plumb adverb adverbs pos 
+plump plump adverb adverbs pos 
+possibly possibly adverb adverbs pos 
+post post adverb adverbs pos 
+praiseworthy praiseworthy adverb adverbs pos 
+presently presently adverb adverbs pos 
+presto presto adverb adverbs pos 
+prettily prettily adverb adverbs pos 
+pretty pretty adverb adverbs pos 
+primarily primarily adverb adverbs pos 
+pro pro adverb adverbs pos 
+pronto pronto adverb adverbs pos 
+properly properly adverb adverbs pos 
+publicly publicly adverb adverbs pos 
+purely purely adverb adverbs pos 
+purposely purposely adverb adverbs pos 
+quarterly quarterly adverb adverbs pos 
+quick quick adverb adverbs pos 
+quite quite adverb adverbs pos 
+radically radically adverb adverbs pos 
+rare rare adverb adverbs pos 
+rarely rarely adverb adverbs pos 
+rash rash adverb adverbs pos 
+readily readily adverb adverbs pos 
+really really adverb adverbs pos 
+regardless regardless adverb adverbs pos 
+reportedly reportedly adverb adverbs pos 
+respectively respectively adverb adverbs pos 
+retrograde retrograde adverb adverbs pos 
+richly richly adverb adverbs pos 
+right right adverb adverbs pos 
+rightly rightly adverb adverbs pos 
+ringside ringside adverb adverbs pos 
+round round adverb adverbs pos 
+running running adverb adverbs pos 
+same same adverb adverbs pos 
+satisfactorily satisfactorily adverb adverbs pos 
+say say adverb adverbs pos 
+scant scant adverb adverbs pos 
+scantily scantily adverb adverbs pos 
+scarce scarce adverb adverbs pos 
+seaward seaward adverb adverbs pos 
+secondhand secondhand adverb adverbs pos 
+seriously seriously adverb adverbs pos 
+sharp sharp adverb adverbs pos 
+short short adverb adverbs pos 
+shortly shortly adverb adverbs pos 
+shyly shyly adverb adverbs pos 
+sic sic adverb adverbs pos 
+sideward sideward adverb adverbs pos 
+sideways sideways adverb adverbs pos 
+signally signally adverb adverbs pos 
+simply simply adverb adverbs pos 
+since since adverb adverbs pos 
+singly singly adverb adverbs pos 
+sky-high sky-high adverb adverbs pos 
+skyward skyward adverb adverbs pos 
+sleepily sleepily adverb adverbs pos 
+slick slick adverb adverbs pos 
+slow slow adverb adverbs pos 
+smack smack adverb adverbs pos 
+small small adverb adverbs pos 
+smart smart adverb adverbs pos 
+smash smash adverb adverbs pos 
+so so adverb adverbs pos 
+socially socially adverb adverbs pos 
+soft soft adverb adverbs pos 
+solely solely adverb adverbs pos 
+solo solo adverb adverbs pos 
+some some adverb adverbs pos 
+someday someday adverb adverbs pos 
+somehow somehow adverb adverbs pos 
+someplace someplace adverb adverbs pos 
+something something adverb adverbs pos 
+sometime sometime adverb adverbs pos 
+somewhere somewhere adverb adverbs pos 
+sore sore adverb adverbs pos 
+sound sound adverb adverbs pos 
+south south adverb adverbs pos 
+southeast southeast adverb adverbs pos 
+southerly southerly adverb adverbs pos 
+southward southward adverb adverbs pos 
+southwest southwest adverb adverbs pos 
+speedily speedily adverb adverbs pos 
+square square adverb adverbs pos 
+squash squash adverb adverbs pos 
+stark stark adverb adverbs pos 
+stateside stateside adverb adverbs pos 
+steadily steadily adverb adverbs pos 
+steady steady adverb adverbs pos 
+stealthily stealthily adverb adverbs pos 
+stiff stiff adverb adverbs pos 
+still still adverb adverbs pos 
+stock stock adverb adverbs pos 
+stonily stonily adverb adverbs pos 
+straightaway straightaway adverb adverbs pos 
+straightforward straightforward adverb adverbs pos 
+such such adverb adverbs pos 
+summarily summarily adverb adverbs pos 
+sure sure adverb adverbs pos 
+surely surely adverb adverbs pos 
+swift swift adverb adverbs pos 
+temporarily temporarily adverb adverbs pos 
+testily testily adverb adverbs pos 
+tete-a-tete tete-a-tete adverb adverbs pos 
+the the adverb adverbs pos 
+thence thence adverb adverbs pos 
+thenceforth thenceforth adverb adverbs pos 
+there there adverb adverbs pos 
+thereabouts thereabouts adverb adverbs pos 
+thereby thereby adverb adverbs pos 
+therefore therefore adverb adverbs pos 
+thereto thereto adverb adverbs pos 
+therewith therewith adverb adverbs pos 
+thick thick adverb adverbs pos 
+thin thin adverb adverbs pos 
+thorough thorough adverb adverbs pos 
+though though adverb adverbs pos 
+thrice thrice adverb adverbs pos 
+through through adverb adverbs pos 
+thwart thwart adverb adverbs pos 
+tight tight adverb adverbs pos 
+timely timely adverb adverbs pos 
+tiptoe tiptoe adverb adverbs pos 
+to to adverb adverbs pos 
+today today adverb adverbs pos 
+tomorrow tomorrow adverb adverbs pos 
+tonight tonight adverb adverbs pos 
+too too adverb adverbs pos 
+topsy-turvy topsy-turvy adverb adverbs pos 
+totally totally adverb adverbs pos 
+trim trim adverb adverbs pos 
+true true adverb adverbs pos 
+truly truly adverb adverbs pos 
+twice twice adverb adverbs pos 
+unaware unaware adverb adverbs pos 
+underground underground adverb adverbs pos 
+underhand underhand adverb adverbs pos 
+underneath underneath adverb adverbs pos 
+undersea undersea adverb adverbs pos 
+unduly unduly adverb adverbs pos 
+uneasily uneasily adverb adverbs pos 
+uneasy uneasy adverb adverbs pos 
+unhappily unhappily adverb adverbs pos 
+unmannerly unmannerly adverb adverbs pos 
+unnecessarily unnecessarily adverb adverbs pos 
+unseemly unseemly adverb adverbs pos 
+untimely untimely adverb adverbs pos 
+uphill uphill adverb adverbs pos 
+uppermost uppermost adverb adverbs pos 
+upstage upstage adverb adverbs pos 
+upstairs upstairs adverb adverbs pos 
+uptown uptown adverb adverbs pos 
+upward upward adverb adverbs pos 
+very very adverb adverbs pos 
+vile vile adverb adverbs pos 
+voluntarily voluntarily adverb adverbs pos 
+warily warily adverb adverbs pos 
+warm warm adverb adverbs pos 
+way way adverb adverbs pos 
+wearily wearily adverb adverbs pos 
+weekdays weekdays adverb adverbs pos 
+weekends weekends adverb adverbs pos 
+weekly weekly adverb adverbs pos 
+well-nigh well-nigh adverb adverbs pos 
+west west adverb adverbs pos 
+westerly westerly adverb adverbs pos 
+westward westward adverb adverbs pos 
+whence whence adverb adverbs pos 
+where where adverb adverbs pos 
+whereabouts whereabouts adverb adverbs pos 
+whereby whereby adverb adverbs pos 
+wherefore wherefore adverb adverbs pos 
+wholesale wholesale adverb adverbs pos 
+wholly wholly adverb adverbs pos 
+why why adverb adverbs pos 
+wide wide adverb adverbs pos 
+wild wild adverb adverbs pos 
+willy-nilly willy-nilly adverb adverbs pos 
+work work adverb adverbs pos 
+yea yea adverb adverbs pos 
+yearly yearly adverb adverbs pos 
+yesterday yesterday adverb adverbs pos 
+as as adverb adverbs pos 
+somewhat somewhat adverb adverbs pos 
+abed abed adverb adverbs pos 
+about about adverb adverbs pos 
+abroad abroad adverb adverbs pos 
+afar afar adverb adverbs pos 
+afloat afloat adverb adverbs pos 
+afoot afoot adverb adverbs pos 
+after after adverb adverbs pos 
+again again adverb adverbs pos 
+ahead ahead adverb adverbs pos 
+ajar ajar adverb adverbs pos 
+allover allover adverb adverbs pos 
+aloof aloof adverb adverbs pos 
+aloud aloud adverb adverbs pos 
+altogether altogether adverb adverbs pos 
+apropos apropos adverb adverbs pos 
+asleep asleep adverb adverbs pos 
+asunder asunder adverb adverbs pos 
+atop atop adverb adverbs pos 
+awful awful adverb adverbs pos 
+barefoot barefoot adverb adverbs pos 
+ben ben adverb adverbs pos 
+besides besides adverb adverbs pos 
+between between adverb adverbs pos 
+bias bias adverb adverbs pos 
+bitter bitter adverb adverbs pos 
+broad broad adverb adverbs pos 
+but but adverb adverbs pos 
+chief chief adverb adverbs pos 
+clean clean adverb adverbs pos 
+clear clear adverb adverbs pos 
+con con adverb adverbs pos 
+counter counter adverb adverbs pos 
+cum cum adverb adverbs pos 
+damned damned adverb adverbs pos 
+dead dead adverb adverbs pos 
+deep deep adverb adverbs pos 
+downstream downstream adverb adverbs pos 
+either either adverb adverbs pos 
+even even adverb adverbs pos 
+ever ever adverb adverbs pos 
+fain fain adverb adverbs pos 
+fair fair adverb adverbs pos 
+far far adverb adverbs pos 
+forever forever adverb adverbs pos 
+gratis gratis adverb adverbs pos 
+helter-skelter helter-skelter adverb adverbs pos 
+hereafter hereafter adverb adverbs pos 
+herein herein adverb adverbs pos 
+hither hither adverb adverbs pos 
+however however adverb adverbs pos 
+in in adverb adverbs pos 
+indeed indeed adverb adverbs pos 
+insofar insofar adverb adverbs pos 
+instead instead adverb adverbs pos 
+moreover moreover adverb adverbs pos 
+mortal mortally adverb adverbs pos 
+neither neither adverb adverbs pos 
+never never adverb adverbs pos 
+not not adverb adverbs pos 
+often often adverb adverbs pos 
+oftentimes oftentimes adverb adverbs pos 
+on on adverb adverbs pos 
+other other adverb adverbs pos 
+out-and-out out-and-out adverb adverbs pos 
+over over adverb adverbs pos 
+overhead overhead adverb adverbs pos 
+overseas overseas adverb adverbs pos 
+parallel parallel adverb adverbs pos 
+parcel parcel adverb adverbs pos 
+pat pat adverb adverbs pos 
+piecemeal piecemeal adverb adverbs pos 
+plain plain adverb adverbs pos 
+pop pop adverb adverbs pos 
+precious precious adverb adverbs pos 
+proper proper adverb adverbs pos 
+queer queer adverb adverbs pos 
+quiet quiet adverb adverbs pos 
+random random adverb adverbs pos 
+rather rather adverb adverbs pos 
+real real adverb adverbs pos 
+retail retail adverb adverbs pos 
+seldom seldom adverb adverbs pos 
+sheerly sheerly adverb adverbs pos 
+single-handed single-handed adverb adverbs pos 
+slap slap adverb adverbs pos 
+snap snap adverb adverbs pos 
+solid solid adverb adverbs pos 
+sometimes sometimes adverb adverbs pos 
+somewheres somewheres adverb adverbs pos 
+soon soon adverb adverbs pos 
+strait strait adverb adverbs pos 
+sweetly sweetly adverb adverbs pos 
+tandem tandem adverb adverbs pos 
+that that adverb adverbs pos 
+then then adverb adverbs pos 
+thereafter thereafter adverb adverbs pos 
+therein therein adverb adverbs pos 
+thereof thereof adverb adverbs pos 
+thereon thereon adverb adverbs pos 
+thereupon thereupon adverb adverbs pos 
+this this adverb adverbs pos 
+thither thither adverb adverbs pos 
+throughout throughout adverb adverbs pos 
+thus thus adverb adverbs pos 
+tip-top tip-top adverb adverbs pos 
+together together adverb adverbs pos 
+total total adverb adverbs pos 
+unawares unawares adverb adverbs pos 
+under under adverb adverbs pos 
+underfoot underfoot adverb adverbs pos 
+underhanded underhanded adverb adverbs pos 
+unequal unequal adverb adverbs pos 
+up up adverb adverbs pos 
+upon upon adverb adverbs pos 
+upstream upstream adverb adverbs pos 
+verbatim verbatim adverb adverbs pos 
+war war adverb adverbs pos 
+what what adverb adverbs pos 
+when when adverb adverbs pos 
+whenever whenever adverb adverbs pos 
+wherein wherein adverb adverbs pos 
+whereof whereof adverb adverbs pos 
+wherever wherever adverb adverbs pos 
+whither whither adverb adverbs pos 
+withal withal adverb adverbs pos 
+within within adverb adverbs pos 
+without without adverb adverbs pos 
+yes yes adverb adverbs pos 
+yet yet adverb adverbs pos 
+yon yon adverb adverbs pos 
+yonder yonder adverb adverbs pos 
+zigzag zigzag adverb adverbs pos 
