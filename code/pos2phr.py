@@ -1,4 +1,4 @@
-import os, importlib, pdb, json
+import os, sys, importlib, pdb, json
 import pdb
 import pos2phr
 import re, string
@@ -23,6 +23,8 @@ test_p = False
 #test_p = True
 
 data_dir = "/Users/peteranick/Documents/work/AskMe/data/"
+data_dir = '../data'
+
 #corpus = "processed_pos_bio"
 # I have changed the directory structure to:
 # data/corpora/<corpus_name>/pos
@@ -50,6 +52,9 @@ d_lexicon_noun = {}
 d_lexicon_prep_conj = {}
 d_en_jj_vb_noise = {}
 
+
+print(f'>>> loading lexical resources')
+
 with open("lexicon_art_pro_adv.txt") as str_file:
     for line in str_file:
         line = line.strip()
@@ -71,11 +76,13 @@ with open("en_jj_vb.noise") as str_file:
         noiseword = line.strip()
         d_en_jj_vb_noise[noiseword] = True
 
+
 # default dict for data capture
 # collection frequency
 d_np2cf = defaultdict(int)
 # document frequency
 d_np2df = defaultdict(int)
+
 
 # Parse a single processed_pos file to identify, filter, and normalize
 # noun phrases. Conpute the term frequencies for the doc and increment df
@@ -190,6 +197,7 @@ def np_normalize(np):
     return(" ".join(normalized_np))
 """
 
+
 # normalize while preserving case (wc)
 def np_normalize_wc(np):
     # break the np into words by spaces
@@ -236,7 +244,6 @@ def np_normalize_wc(np):
     last_word = last_word.strip(string.punctuation)
     last_word = last_word.strip(" ‘•’‘“”")
 
-    
     # normalize head word unless it begins with a capital letter    
     if last_word_surface.istitle():
         normalized_np.append(last_word_surface)
@@ -260,8 +267,10 @@ def clean_dashes(s):
     
     return(s)
 
+
 def strip_punc(s):
     return(s.strip(string.punctuation))
+
 
 def filter_p(s):
     # returns True if s contains certain punc
@@ -270,6 +279,7 @@ def filter_p(s):
         return(True)
     else:
         return(False)
+
 
 def clean(s):
     # return empty string if certain punctuation is found
@@ -285,10 +295,12 @@ def clean(s):
     
 # pos2phr.process_dir("/Users/peteranick/Documents/work/AskMe/data/processed_pos_bio")
 
+
 # process the bio corpus
 # pos2phr.pd()
 def pd():
   process_dir("/Users/peteranick/Documents/work/AskMe/data", "bio")
+
 
 # Loop through the processed_pos files for the corpus and write out json files
 # with tf, cf, and df values for noun phrases of one or more terms.
@@ -305,6 +317,7 @@ def process_dir(data_dir, corpus, num_files=10000000):
     d_doc2tf = defaultdict(int)
     path = os.path.join(data_dir, "corpora", corpus)
     pos_path = os.path.join(data_dir, "corpora", corpus, "pos")
+    print(f'>>> processing {num_files} files in {pos_path}')
     # paths for output json files
     cf_out = os.path.join(path, "cf.json")
     df_out = os.path.join(path, "df.json")
@@ -313,7 +326,9 @@ def process_dir(data_dir, corpus, num_files=10000000):
     file_list = os.listdir(pos_path)
     #print(file_list[0:20])
     # loop over all files in the corpus/pos dir
-    for file in file_list[0:num_files]:
+    for n, file in enumerate(file_list[0:num_files]):
+        if n % 100 == 0:
+            print(n)
         filename = os.path.join(pos_path, file)
         #print("****Processing: %s" % filename)
         d_np2tf = pos_file2phr(filename, d_np2cf, d_np2df)
@@ -359,7 +374,8 @@ def trim_by_length(odict, full_dict, min_len):
             break
                 
     return(l_trimmed)
-        
+
+
 # Read df and cf json files and contruct head and mod files
 # min_cf and min_df are cutoffs for inclusion of an np in the list
 # for any head or mod.
@@ -435,7 +451,6 @@ def create_head_mod_files(data_dir, corpus, min_cf=minimum_cf, min_df=minimum_df
         #pdb.set_trace()
         d_mod_ratio[mod] = (round(ratio_sum/len(d_mod[mod]), 2), round(statistics.median(l_ratio), 2) ) 
 
-        
     # printing result
     #print("Sorted keys by value list : " + str(d_head_sorted))
     print("Trimmed keys: %s" % l_head_trimmed)
@@ -448,7 +463,6 @@ def create_head_mod_files(data_dir, corpus, min_cf=minimum_cf, min_df=minimum_df
     mods_trimmed_out = os.path.join(path, "mods_trimmed.json")
     head_ratio_out = os.path.join(path, "head_ratio.json")
     mod_ratio_out = os.path.join(path, "mod_ratio.json")
-
 
     with open(heads_out, 'w', encoding='utf-8') as f:
         json.dump(d_head, f, ensure_ascii=False, indent=4)
@@ -465,15 +479,18 @@ def create_head_mod_files(data_dir, corpus, min_cf=minimum_cf, min_df=minimum_df
         json.dump(d_mod_ratio, f, ensure_ascii=False, indent=4)
         
     return(l_head_trimmed, d_head, l_mod_trimmed, d_mod, d_head_ratio, d_mod_ratio)
+
             
 def test(corpus, file):
     test_file = os.path.join(data_dir, "corpora", corpus, "pos", file)
     pos_file2phr(test_file)
 
+
 # (h,m) = pos2phr.test_chmf("bio")
 def test_chmf(corpus):
     r = create_head_mod_files(data_dir, corpus)
     return(r)
+
 
 # Full run
 # (hs,h, ms, m, hr, mr) = pos2phr.run_all("mol")
@@ -483,9 +500,15 @@ def test_chmf(corpus):
 # bio corpus takes 7 minutes to run on mac.
 
 def run_all(corpus, num_files=100000000, create_hm=True):
-    process_dir(data_dir, corpus)
+    process_dir(data_dir, corpus, num_files=num_files)
     if create_hm:
         r = create_head_mod_files(data_dir, corpus)
         return(r)
     
 
+if __name__ == '__main__':
+
+    corpus = 'bio'
+    if len(sys.argv) > 1 and sys.argv[1] in ('bio', 'geo', 'mol'):
+        corpus = sys.argv[1]
+    (hs, h, ms, m, hr, mr) = run_all(corpus, num_files=100000)
