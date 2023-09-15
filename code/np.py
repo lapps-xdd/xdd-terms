@@ -26,17 +26,17 @@ np.heads("1") # run over a cluster number
 reload(np)
 
 """
+
 corpora_dir = "/Users/peteranick/Documents/work/AskMe/data/corpora"
+corpora_dir = "../data/corpora"
+
 #corpus = "geo"
 corpus = "bio"
+
 #clusters_file = "geoarchive_content_cluster_20.json"
 #clusters_file = os.path.join(corpora_dir, corpus, "geoarchive_content_cluster_20.json")
 #clusters_file = os.path.join(corpora_dir, corpus, "geoarchive_content_50_cluster_example.json")
 clusters_file = os.path.join(corpora_dir, corpus, "biomedical_content_50_cluster_example.json")
-
-
-
-
 
 
 def populate_corpus_files(corpus):
@@ -57,11 +57,13 @@ def populate_corpus_files(corpus):
     corpus_size = len(d_doc2tf)
     return(d_np2df, d_doc2tf, d_head2nps, d_mod2nps, corpus_size)
         
+
 # read in a list of files to be a proxy for the top n results of a query
 def load_clusters(clusters_file):
     with open(clusters_file) as json_file:
         d_cid2files = json.load(json_file)
     return(d_cid2files)
+
 
 # corpus tables
 (d_np2df, d_doc2tf, d_head2nps, d_mod2nps, corpus_size) = populate_corpus_files(corpus)
@@ -75,7 +77,6 @@ def heads(cluster_id):
     d_np2r_tf = defaultdict(int)
     # sum of the df across terms within the result set
     d_np2r_df = defaultdict(int)
-
     d_head2r_nps = defaultdict(set)
     d_mod2r_nps = defaultdict(set)
     sorted_heads = []
