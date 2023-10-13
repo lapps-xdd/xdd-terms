@@ -77,19 +77,13 @@ with open("en_jj_vb.noise") as str_file:
         d_en_jj_vb_noise[noiseword] = True
 
 
-# default dict for data capture
-# collection frequency
-d_np2cf = defaultdict(int)
-# document frequency
-d_np2df = defaultdict(int)
-
-
-# Parse a single processed_pos file to identify, filter, and normalize
-# noun phrases. Conpute the term frequencies for the doc and increment df
-# and cf counts for the corpus as a whole.
 
 def pos_file2phr(filename, d_np2cf, d_np2df):
-  # accumulate a list of phrases in file_phr
+  """Parse a single processed_pos file to identify, filter, and normalize noun
+  phrases. Conpute (update) the term frequencies for the doc and increment df
+  and cf counts for the corpus as a whole. Return a list of phrases with their
+  frequencies in filename."""
+
   file_phr = []
   with open(filename) as str_file:
     # start in "beginning" context
@@ -121,14 +115,12 @@ def pos_file2phr(filename, d_np2cf, d_np2df):
           # normalize the phrase (filter noise and lemmatize the head word)
           ###norm = np_normalize(cleaned)
           norm = np_normalize_wc(cleaned)
-
           if test_p:
             if np == norm:
               print(np)
               #pass
             else:
-              print("%s => %s" % (np, norm))
-              
+              print("%s => %s" % (np, norm))              
           else:
             # Save the phrase instance in file_phr list
             # and increment cf count
@@ -138,11 +130,9 @@ def pos_file2phr(filename, d_np2cf, d_np2df):
         else:
           # we have reached the end of the np section
           context = "b"
-
       if test_p:
         print("context: %s" % context)
 
-    #"""
     # Now that we have a list of all nps in file_phr, use Counter to
     # create a dictionary of terms and frequencies for all nps in the file.
     d_np2tf = Counter(file_phr)
@@ -150,7 +140,7 @@ def pos_file2phr(filename, d_np2cf, d_np2df):
       # increment df by one for all terms found in this doc
       d_np2df[value] += 1
       #print(value, count)
-    #"""
+
     return(d_np2tf)
 
 
@@ -299,66 +289,69 @@ def clean(s):
 # process the bio corpus
 # pos2phr.pd()
 def pd():
-  process_dir("/Users/peteranick/Documents/work/AskMe/data", "bio")
+    process_dir("/Users/peteranick/Documents/work/AskMe/data", "bio")
 
 
-# Loop through the processed_pos files for the corpus and write out json files
+# Loop through the processed_pos files for the corpus and write json files
 # with tf, cf, and df values for noun phrases of one or more terms.
 # To process a subset of files for testing, set num_files to a lower number.
-# Output written to corpus directory: cf.json, tf.json, df.json, hr.json, mr.json
+# Output written to corpus directory: cf.json, tf.json, df.json
+
 def process_dir(data_dir, corpus, num_files=10000000):
     # corpus frequency
-    #d_np2cf = defaultdict(int)
     d_np2cf = Counter()
     # doc frequency
-    #d_np2df = defaultdict(int)
     d_np2df = Counter()
     # tf per doc
-    d_doc2tf = defaultdict(int)
+    d_doc2tf = {}
     path = os.path.join(data_dir, "corpora", corpus)
     pos_path = os.path.join(data_dir, "corpora", corpus, "pos")
-    print(f'>>> processing {num_files} files in {pos_path}')
+    print(f'>>> processing files in {pos_path}')
     # paths for output json files
     cf_out = os.path.join(path, "cf.json")
     df_out = os.path.join(path, "df.json")
     tf_out = os.path.join(path, "tf.json")
     
     file_list = os.listdir(pos_path)
-    #print(file_list[0:20])
-    # loop over all files in the corpus/pos dir
     for n, file in enumerate(file_list[0:num_files]):
-        if n % 100 == 0:
+        if n % 100 == 0 and n != 0:
             print(n)
         filename = os.path.join(pos_path, file)
         #print("****Processing: %s" % filename)
         d_np2tf = pos_file2phr(filename, d_np2cf, d_np2df)
         d_doc2tf[file] = d_np2tf
-    """
-    # output cf and df stats
-    print("--------DF stats:")
-    print(d_np2df.most_common(10))
-    """
+
+    # output cf, df and tf stats
+    #print_df_stats(d_np2df)
+    #print_cf_stats(d_np2cf)    
+    #print_tf_stats(d_doc2tf)        
     with open(df_out, 'w', encoding='utf-8') as f:
+        print(f'Writing {df_out}')
         json.dump(d_np2df, f, ensure_ascii=False, indent=4)
-
-    """
-    print("--------CF stats:")
-    for k, v in d_np2cf.items():
-        print(k, v.most_common(10))
-    print(d_np2cf.most_common(10))
-    """
-        
     with open(cf_out, 'w', encoding='utf-8') as f:
+        print(f'Writing {cf_out}')
         json.dump(d_np2cf, f, ensure_ascii=False, indent=4)
-
-    """
-    print("--------TF stats:___________________________")
-    for k, v in d_doc2tf.items():
-        print(k, v.most_common(10))
-    """
-        
     with open(tf_out, 'w', encoding='utf-8') as f:
+        print(f'Writing {tf_out}')
         json.dump(d_doc2tf, f, ensure_ascii=False, indent=4)
+
+
+def print_df_stats(d_np2df):
+    print("-------- DF stats:")
+    print(d_np2df.most_common(5))
+    print()
+
+def print_cf_stats(d_np2cf):
+    print("-------- CF stats:")
+    print(d_np2cf.most_common(5))
+    print()
+
+def print_tf_stats(d_doc2tf):
+    print("-------- TF stats:")
+    for k, v in d_doc2tf.items():
+        print(k, v.most_common(5))
+    print()
+
 
 
 # Given a sorted odict and corresponding head or mod dict,
@@ -483,7 +476,12 @@ def create_head_mod_files(data_dir, corpus, min_cf=minimum_cf, min_df=minimum_df
             
 def test(corpus, file):
     test_file = os.path.join(data_dir, "corpora", corpus, "pos", file)
-    pos_file2phr(test_file)
+    return pos_file2phr(test_file, defaultdict(int), defaultdict(int))
+
+
+def print_terms(terms, threshold=0):
+    """Printing terms over some frequency, useful on the output of pos_file2phr"""
+    print('\n'.join([f'{f:2} {t}' for t,f in terms.items() if f > threshold]))
 
 
 # (h,m) = pos2phr.test_chmf("bio")
