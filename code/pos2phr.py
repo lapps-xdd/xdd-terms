@@ -1,6 +1,6 @@
-import os, sys, importlib, pdb, json
+import os, sys, importlib, pdb, json, argparse
 import pdb
-import pos2phr
+#import pos2phr
 import re, string
 import statistics
 from collections import defaultdict, OrderedDict
@@ -53,7 +53,7 @@ d_lexicon_prep_conj = {}
 d_en_jj_vb_noise = {}
 
 
-print(f'>>> loading lexical resources')
+print(f'>>> Loading lexical resources')
 
 with open("lexicon_art_pro_adv.txt") as str_file:
     for line in str_file:
@@ -502,11 +502,67 @@ def run_all(corpus, num_files=100000000, create_hm=True):
     if create_hm:
         r = create_head_mod_files(data_dir, corpus)
         return(r)
-    
+
+
+# Added for easier integration into the xDD environment
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Collect term frequencies')
+    parser.add_argument('-i', help="source directory")
+    parser.add_argument('-o', help="output directory within source directory", default='output/trm')
+    parser.add_argument('--limit', help="Maximum number of documents to process", default=sys.maxsize)
+    return parser.parse_args()
+
+
+def process_directory(pos_dir, num_files):
+    """Based on process_dir(), but adapted to make it easier to integrate into other
+    applications."""
+
+    print(f'>>> processing files in {pos_dir}')
+
+    d_np2cf = Counter()   # corpus frequency
+    d_np2df = Counter()   # doc frequency
+    d_doc2tf = {}         # tf per doc
+
+    # paths for output json files
+    # TODO: this is now hard-wired
+    trm_dir = os.path.join(pos_dir, "..", "trm")
+    cf_out = os.path.join(trm_dir, "cf.json")
+    df_out = os.path.join(trm_dir, "df.json")
+    tf_out = os.path.join(trm_dir, "tf.json")
+
+    file_list = [f for f in os.listdir(pos_dir) if f.endswith('.txt')]
+    for n, file in enumerate(file_list[0:num_files]):
+        if n % 100 == 0 and n != 0:
+            print(n)
+        filename = os.path.join(pos_dir, file)
+        #print("****Processing: %s" % filename)
+        d_np2tf = pos_file2phr(filename, d_np2cf, d_np2df)
+        d_doc2tf[file] = d_np2tf
+
+    os.makedirs(trm_dir, exist_ok=True)
+    with open(df_out, 'w', encoding='utf-8') as f:
+        print(f'Writing {df_out}')
+        json.dump(d_np2df, f, ensure_ascii=False, indent=4)
+    with open(cf_out, 'w', encoding='utf-8') as f:
+        print(f'Writing {cf_out}')
+        json.dump(d_np2cf, f, ensure_ascii=False, indent=4)
+    with open(tf_out, 'w', encoding='utf-8') as f:
+        print(f'Writing {tf_out}')
+        json.dump(d_doc2tf, f, ensure_ascii=False, indent=4)
+
+
 
 if __name__ == '__main__':
 
-    corpus = 'bio'
-    if len(sys.argv) > 1 and sys.argv[1] in ('bio', 'geo', 'mol'):
-        corpus = sys.argv[1]
-    (hs, h, ms, m, hr, mr) = run_all(corpus, num_files=100000)
+    if '-i' in sys.argv[1:]:
+        args = parse_args()
+        process_directory(args.i, int(args.limit))
+        #create_head_mod_files2(data_dir, corpus)
+
+    else:
+        corpus = 'bio'
+        if len(sys.argv) > 1 and sys.argv[1] in ('bio', 'geo', 'mol'):
+            corpus = sys.argv[1]
+        (hs, h, ms, m, hr, mr) = run_all(corpus, num_files=100000)
