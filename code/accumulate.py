@@ -12,7 +12,7 @@ Those files can be created with pos2phr.py.
 
 """
 
-import os, json, math
+import os, sys, json, math, argparse
 
 DOMAINS = ('bio', 'geo', 'mol')
 
@@ -106,12 +106,43 @@ def analyze_frequencies():
 		print('   average number of terms', int(sum(term_sizes) / len(d)))
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='Accumulate frequencies and calculate TF-IDF scores')
+    parser.add_argument('-i', help="directory with frequency information")
+    return parser.parse_args()
+
+
+def collect_from_directory(term_directory: str):
+	cf_file = os.path.join(term_directory, 'cf.json')
+	df_file = os.path.join(term_directory, 'df.json')
+	tf_file = os.path.join(term_directory, 'tf.json')
+	print('>>>', term_directory)
+	#print('Loading corpus frequencies...')
+	#cf_data = json.loads(open(cf_file).read())
+	print('Loading document and term frequencies...')
+	df_data = json.loads(open(df_file).read())
+	tf_data = json.loads(open(tf_file).read())
+	print('Accumulating frequencies and TFIDF scores...')
+	accumulation = {}
+	calculate_tfidf(df_data, tf_data, accumulation)
+	return accumulation
+
+
 if __name__ == '__main__':
 
 	#test_tfidf()
 	#analyze_frequencies()
 	#exit()
-	for domain in DOMAINS:
-		d = collect_from_domain(domain)
-		with open(f'frequencies-{domain}.json', 'w') as fh:
+
+	if '-i' in sys.argv[:]:
+		args = parse_args()
+		d = collect_from_directory(args.i)
+		out_file = os.path.join(args.i, 'frequencies.json')
+		print(f'Saving scores to {out_file}')
+		with open(out_file, 'w') as fh:
 			json.dump(d, fh, indent=2)
+	else:
+		for domain in DOMAINS:
+			d = collect_from_domain(domain)
+			with open(f'frequencies-{domain}.json', 'w') as fh:
+				json.dump(d, fh, indent=2)
