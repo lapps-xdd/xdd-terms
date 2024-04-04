@@ -33,6 +33,28 @@ $ cd code
 $ python3 pos2phr.py (bio|geo|mol)
 ```
 
+## Alternative entry point
+
+Used by [https://github.com/lapps-xdd/xdd-integration](https://github.com/lapps-xdd/xdd-integration).
+
+This does not rely on the directory structure above. It first collects the frequencies and then accumulates TFIDF scores for later insertion into the database. It does not print the head and modifier files (which should be added, even though they are not currently entered into the databse).
+
+Frequency collection:
+
+```
+$ python pos2phr.py --pos POS_DIR --out TERMS_DIR [--limit N]
+```
+
+Run the script to collect term frequencies over the part-of-speech data in POS_DIR and write frquencies to TERMS\_DIR. Restrict counting to N documnets if --limit is used.
+
+Accumulating TF-IDF scores:
+
+```
+$ python accumulate.py --terms TERMS_DIR
+```
+
+Take the frequencies from TERMS\_DIR and a file with frequencies and tf-idf scores.
+
 
 ## Analyzing clusters of documents
 

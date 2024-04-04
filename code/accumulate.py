@@ -108,7 +108,7 @@ def analyze_frequencies():
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Accumulate frequencies and calculate TF-IDF scores')
-    parser.add_argument('-i', help="directory with frequency information")
+    parser.add_argument('--terms', help="directory with frequency information")
     return parser.parse_args()
 
 
@@ -134,10 +134,10 @@ if __name__ == '__main__':
 	#analyze_frequencies()
 	#exit()
 
-	if '-i' in sys.argv[:]:
+	if '--terms' in sys.argv[:]:
 		args = parse_args()
-		d = collect_from_directory(args.i)
-		out_file = os.path.join(args.i, 'frequencies.json')
+		d = collect_from_directory(args.terms)
+		out_file = os.path.join(args.terms, 'frequencies.json')
 		print(f'Saving scores to {out_file}')
 		with open(out_file, 'w') as fh:
 			json.dump(d, fh, indent=2)

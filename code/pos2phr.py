@@ -506,16 +506,15 @@ def run_all(corpus, num_files=100000000, create_hm=True):
 
 # Added for easier integration into the xDD environment
 
-
 def parse_args():
     parser = argparse.ArgumentParser(description='Collect term frequencies')
-    parser.add_argument('-i', help="source directory")
-    parser.add_argument('-o', help="output directory within source directory", default='output/trm')
-    parser.add_argument('--limit', help="Maximum number of documents to process", default=sys.maxsize)
+    parser.add_argument('--pos', help="source directory with part-of-speech data")
+    parser.add_argument('--out', help="output directory for term frequencies")
+    parser.add_argument('--limit', help="Maximum number of documents to process", type=int, default=sys.maxsize)
     return parser.parse_args()
 
 
-def process_directory(pos_dir, num_files):
+def process_directory(pos_dir, trm_dir, num_files):
     """Based on process_dir(), but adapted to make it easier to integrate into other
     applications."""
 
@@ -526,8 +525,6 @@ def process_directory(pos_dir, num_files):
     d_doc2tf = {}         # tf per doc
 
     # paths for output json files
-    # TODO: this is now hard-wired
-    trm_dir = os.path.join(pos_dir, "..", "trm")
     cf_out = os.path.join(trm_dir, "cf.json")
     df_out = os.path.join(trm_dir, "df.json")
     tf_out = os.path.join(trm_dir, "tf.json")
@@ -556,9 +553,9 @@ def process_directory(pos_dir, num_files):
 
 if __name__ == '__main__':
 
-    if '-i' in sys.argv[1:]:
+    if '--pos' in sys.argv[1:]:
         args = parse_args()
-        process_directory(args.i, int(args.limit))
+        process_directory(args.pos, args.out, args.limit)
         #create_head_mod_files2(data_dir, corpus)
 
     else:
