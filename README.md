@@ -1,6 +1,9 @@
 # XDD Terms
 
-Code to create term lists and to analyze terms in a subset of a domain/topic.
+Code to create term lists and to analyze terms in a subset of documents.
+
+It includes functionality to (1) create term lists, (2) create lists of relevant terms for a document set, and (3) analyze clusters. There are two ways to do the first, the first is the original way of doings this (see next section) and the other is more integrated in the overal processing chain and has less dependencies, but it does not have all functionality.
+
 
 ## Creating term lists
 
@@ -33,7 +36,8 @@ $ cd code
 $ python3 pos2phr.py (bio|geo|mol)
 ```
 
-## Alternative entry point
+
+## Creating term lists - alternative entry point
 
 Used by [https://github.com/lapps-xdd/xdd-integration](https://github.com/lapps-xdd/xdd-integration).
 
@@ -54,6 +58,30 @@ $ python accumulate.py --terms TERMS_DIR
 ```
 
 Take the frequencies from TERMS\_DIR and a file with frequencies and tf-idf scores.
+
+
+## Creating lists of terms relevant to a set
+
+Main script: `tech_terms.py`.
+
+Creates a list of terms for a document set sorted on probability ratio (corpus prob / complement prob). It also shows the frequency and the probability in the document set, and the frequency and probability in the complement of the document set.
+
+```
+Martian surface   217330000.0   434   0.21733   0   1e-09
+impact crater     183270000.0   366   0.18327   0   1e-09
+Noachian          130200000.0   260   0.1302    0   1e-09
+```
+
+This code assumes that a df.json file exists for each corpus named in the -corpora parameter. The directory path should be of the form: `<data-dir>/corpora/<corpus>/df.json`. The df.json files should have been created by running pos2phr.run_all(<corpus>).
+
+To run the code:
+
+```bash
+$ cd <code_dir>
+$ python tech_terms.py -data_dir <data_dir> -corpora mol mars geo cultivars climate bio covd random -max_terms 10000
+```
+A ratio.json file is produced for each corpus named in the -corpora input parameter
+
 
 
 ## Analyzing clusters of documents
